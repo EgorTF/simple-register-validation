@@ -1,12 +1,11 @@
 $(() => {
-    $("#my-form").on("submit", ({
-        currentTarget,
-        preventDefault
-    }) => {
-        const form = currentTarget;
-        const errorMsg = $('#message');
+    // this is the id of the form
+    $("#my-form").submit(function(e) {
 
-        preventDefault();
+        e.preventDefault(); // avoid to execute the actual submit of the form.
+
+        const form = $(this);
+        const errorMsg = $('#message');
 
         $.ajax({
             url: '../php/main.php',
@@ -27,5 +26,8 @@ $(() => {
                 errorMsg.text(message);
             },
         });
-    })
+
+
+    });
+
 });

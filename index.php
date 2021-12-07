@@ -6,7 +6,7 @@
     </head>
 
     <body>
-        <div class="container d-flex align-items-center vh-100" style="width: 70ch;">
+        <div class="container" style="width: 70ch;">
             <div id="message" class="alert d-none mt-3"></div>
 
             <form id="my-form" class="row g-3 mt-1" method="POST">
